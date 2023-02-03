@@ -39,17 +39,28 @@
 
 ![T-Test for manufacturing Lot1](Results/Part_3_t_test_lot1.png)
 
-    Selecting only the data for Manufacturing Lot = 'Lot1', a One Sample t-test was performed. As the p-value of 1.568e-11 is significantly less than the significance level of 0.05, we accept the Null Hypothesis and infer that there is a statistical difference between the PSI of Lot1 and the population mean of 1500 pounds per square inch.
+Selecting only the data for Manufacturing Lot = 'Lot1', a One Sample t-test was performed. As the p-value of 1.568e-11 is significantly less than the significance level of 0.05, we reject the Null Hypothesis and infer that there is a statistical difference between the PSI of Lot1 and the population mean of 1500 pounds per square inch.
 
 ![T-Test for manufacturing Lot2](Results/Part_3_t_test_lot2.png)
 
-    Selecting only the data for Manufacturing Lot = 'Lot2', a One Sample t-test was performed. As the p-value of 0.0005911 is less than the significance level of 0.05, we accept the Null Hypothesis and infer that there is a statistical difference between the PSI of Lot2 and the population mean of 1500 pounds per square inch.
+Selecting only the data for Manufacturing Lot = 'Lot2', a One Sample t-test was performed. As the p-value of 0.0005911 is less than the significance level of 0.05, we reject the Null Hypothesis and infer that there is a statistical difference between the PSI of Lot2 and the population mean of 1500 pounds per square inch.
 
 ![T-Test for manufacturing Lot3](Results/Part_3_t_test_lot3.png)
 
-    Selecting only the data for Manufacturing Lot = 'Lot3', a One Sample t-test was performed. As the p-value of 0.1589 is greater than the significance level of 0.05, we reject the Null Hypothesis and infer that there is no statistical difference between the PSI of Lot3 and the population mean of 1500 pounds per square inch.
+Selecting only the data for Manufacturing Lot = 'Lot3', a One Sample t-test was performed. As the p-value of 0.1589 is greater than the significance level of 0.05, we accept the Null Hypothesis and infer that there is no statistical difference between the PSI of Lot3 and the population mean of 1500 pounds per square inch.
 
 
 ## Study Design: MechaCar vs Competition
 
+In order to compare the performance of MechaCar against the competition, several metrics could be used. From a consumers perspective miles per gallon would be one important metric. 
+
+The null hypothesis or H<sub>0</sub> is that there no statistical difference in 'mpg' between MechaCar and its competitior.
+
+The alternative hypothesis or H<sub>a</sub> is that there is a statistical difference in 'mpg' between MechaCar and its competitor.
+
+To test this hypothesis, the "Two sample pair t-test" can be used since we are working with two different population.
+
+Assuming our dataset contains data from MechaCar and it's competitor (XYZ), the first step would be to create the two data samples - one for MechaCar and the other for XYZ.
+
+Then using the t.test() function of R, compare the 'mpg' for both samples with paired = 'True' option and calculate the p-value. If the p-value is greater than the significane level (0.05), then we don't have enough evidence to reject the null hypothesis and there is no overall difference in 'mpg' between MechaCar and the competitor.
 
